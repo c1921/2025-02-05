@@ -1,6 +1,6 @@
+"use strict";
 // 获取游戏容器
-const gameContainer = document.getElementById('game-container') as HTMLDivElement;
-
+const gameContainer = document.getElementById('game-container');
 // 创建10x10格子
 function createGrid() {
     for (let row = 0; row < 10; row++) {
@@ -14,15 +14,14 @@ function createGrid() {
         }
     }
 }
-
 // 处理格子点击事件
-function handleCellClick(event: Event) {
-    const cell = event.target as HTMLDivElement;
+function handleCellClick(event) {
+    const cell = event.target;
     const row = cell.dataset.row;
     const col = cell.dataset.col;
     console.log(`点击了格子：行 ${row}, 列 ${col}`);
     cell.style.backgroundColor = '#a0d8ef';
 }
-
 // 初始化游戏
-createGrid(); 
+createGrid();
+//# sourceMappingURL=script.js.map
